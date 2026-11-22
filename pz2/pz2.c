@@ -23,38 +23,38 @@ int main() {
     int interval_type;
 
     do {
-        printf("\n--- МЕНЮ ---\n");
-        printf("1. Вычислить Y(x) в точке\n");
-        printf("2. Вычислить V(x) в точке\n");
-        printf("3. Табулировать Y(x)\n");
-        printf("4. Табулировать V(x)\n");
-        printf("5. Построить график Y(x)\n");
-        printf("6. Построить график V(x)\n");
-        printf("7. Расчет Y(x) по набору значений\n");
-        printf("8. Расчет V(x) по набору значений\n");
-        printf("9. Расчет Y(x) с фиксированным шагом (n=10)\n");
-        printf("10. Расчет V(x) с фиксированным шагом (n=10)\n");
-        printf("11. Расчет Y(x) для N случайных значений\n");
-        printf("12. Расчет V(x) для N случайных значений\n");
-        printf("0. Выход\n");
-        printf("Выберите действие: ");
+        printf("\n--- РњР•РќР® ---\n");
+        printf("1. Р’С‹С‡РёСЃР»РёС‚СЊ Y(x) РІ С‚РѕС‡РєРµ\n");
+        printf("2. Р’С‹С‡РёСЃР»РёС‚СЊ V(x) РІ С‚РѕС‡РєРµ\n");
+        printf("3. РўР°Р±СѓР»РёСЂРѕРІР°С‚СЊ Y(x)\n");
+        printf("4. РўР°Р±СѓР»РёСЂРѕРІР°С‚СЊ V(x)\n");
+        printf("5. РџРѕСЃС‚СЂРѕРёС‚СЊ РіСЂР°С„РёРє Y(x)\n");
+        printf("6. РџРѕСЃС‚СЂРѕРёС‚СЊ РіСЂР°С„РёРє V(x)\n");
+        printf("7. Р Р°СЃС‡РµС‚ Y(x) РїРѕ РЅР°Р±РѕСЂСѓ Р·РЅР°С‡РµРЅРёР№\n");
+        printf("8. Р Р°СЃС‡РµС‚ V(x) РїРѕ РЅР°Р±РѕСЂСѓ Р·РЅР°С‡РµРЅРёР№\n");
+        printf("9. Р Р°СЃС‡РµС‚ Y(x) СЃ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рј С€Р°РіРѕРј (n=10)\n");
+        printf("10. Р Р°СЃС‡РµС‚ V(x) СЃ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рј С€Р°РіРѕРј (n=10)\n");
+        printf("11. Р Р°СЃС‡РµС‚ Y(x) РґР»СЏ N СЃР»СѓС‡Р°Р№РЅС‹С… Р·РЅР°С‡РµРЅРёР№\n");
+        printf("12. Р Р°СЃС‡РµС‚ V(x) РґР»СЏ N СЃР»СѓС‡Р°Р№РЅС‹С… Р·РЅР°С‡РµРЅРёР№\n");
+        printf("0. Р’С‹С…РѕРґ\n");
+        printf("Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: ");
 
         if (scanf("%d", &action) != 1) {
-            printf("Ошибка ввода. Введите число.\n");
+            printf("РћС€РёР±РєР° РІРІРѕРґР°. Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ.\n");
             clear_input();
             continue;
         }
 
         if (action == 0) break;
         if (action < 1 || action > 12) {
-            printf("Неверный пункт меню.\n");
+            printf("РќРµРІРµСЂРЅС‹Р№ РїСѓРЅРєС‚ РјРµРЅСЋ.\n");
             continue;
         }
 
         if (action == 1 || action == 2) {
-            printf("Введите x: ");
+            printf("Р’РІРµРґРёС‚Рµ x: ");
             if (scanf("%lf", &x) != 1) {
-                printf("Ошибка ввода.\n");
+                printf("РћС€РёР±РєР° РІРІРѕРґР°.\n");
                 clear_input();
                 continue;
             }
@@ -66,36 +66,36 @@ int main() {
             }
         }
         else if (action >= 3 && action <= 6) {
-            printf("\nВыберите тип промежутка:\n");
-            printf("1. Отрезок [a, b]\n");
-            printf("2. Интервал (a, b)\n");
-            printf("3. Полуинтервал (a, b]\n");
-            printf("4. Полуинтервал [a, b)\n");
-            printf("Ваш выбор: ");
+            printf("\nР’С‹Р±РµСЂРёС‚Рµ С‚РёРї РїСЂРѕРјРµР¶СѓС‚РєР°:\n");
+            printf("1. РћС‚СЂРµР·РѕРє [a, b]\n");
+            printf("2. РРЅС‚РµСЂРІР°Р» (a, b)\n");
+            printf("3. РџРѕР»СѓРёРЅС‚РµСЂРІР°Р» (a, b]\n");
+            printf("4. РџРѕР»СѓРёРЅС‚РµСЂРІР°Р» [a, b)\n");
+            printf("Р’Р°С€ РІС‹Р±РѕСЂ: ");
 
             if (scanf("%d", &interval_type) != 1 || interval_type < 1 || interval_type > 4) {
-                printf("Ошибка выбора промежутка.\n");
+                printf("РћС€РёР±РєР° РІС‹Р±РѕСЂР° РїСЂРѕРјРµР¶СѓС‚РєР°.\n");
                 clear_input();
                 continue;
             }
 
-            printf("Введите начало (a): ");
+            printf("Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»Рѕ (a): ");
             if (scanf("%lf", &a) != 1) { clear_input(); continue; }
-            printf("Введите конец (b): ");
+            printf("Р’РІРµРґРёС‚Рµ РєРѕРЅРµС† (b): ");
             if (scanf("%lf", &b) != 1) { clear_input(); continue; }
-            printf("Введите шаг (h): ");
+            printf("Р’РІРµРґРёС‚Рµ С€Р°Рі (h): ");
             if (scanf("%lf", &h) != 1) { clear_input(); continue; }
 
             if (h == 0) {
-                printf("Ошибка: шаг не может быть равен нулю.\n");
+                printf("РћС€РёР±РєР°: С€Р°Рі РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЂР°РІРµРЅ РЅСѓР»СЋ.\n");
                 continue;
             }
             if ((h > 0 && a > b) || (h < 0 && a < b)) {
-                printf("Ошибка: направление шага не соответствует интервалу.\n");
+                printf("РћС€РёР±РєР°: РЅР°РїСЂР°РІР»РµРЅРёРµ С€Р°РіР° РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РёРЅС‚РµСЂРІР°Р»Сѓ.\n");
                 continue;
             }
             if (a == b) {
-                printf("Ошибка: начало и конец совпадают.\n");
+                printf("РћС€РёР±РєР°: РЅР°С‡Р°Р»Рѕ Рё РєРѕРЅРµС† СЃРѕРІРїР°РґР°СЋС‚.\n");
                 continue;
             }
 
@@ -147,7 +147,7 @@ double calculate_V(double x) {
 }
 
 void tabulate(double (*func)(double), double a, double b, double h, const char* name) {
-    printf("\nТаблица значений для %s:\n", name);
+    printf("\nРўР°Р±Р»РёС†Р° Р·РЅР°С‡РµРЅРёР№ РґР»СЏ %s:\n", name);
     printf(" x\t\t%s\n", name);
     printf("------------------------\n");
     for (double i = a; (h > 0) ? (i <= b + 1e-9) : (i >= b - 1e-9); i += h) {
@@ -156,7 +156,7 @@ void tabulate(double (*func)(double), double a, double b, double h, const char* 
 }
 
 void print_graph(double (*func)(double), double a, double b, double h, const char* name) {
-    printf("\nПсевдографик для %s:\n", name);
+    printf("\nРџСЃРµРІРґРѕРіСЂР°С„РёРє РґР»СЏ %s:\n", name);
     double max_val = 0;
     for (double i = a; (h > 0) ? (i <= b + 1e-9) : (i >= b - 1e-9); i += h) {
         double val = fabs(func(i));
@@ -183,19 +183,19 @@ void print_graph(double (*func)(double), double a, double b, double h, const cha
 
 void calculate_set(double (*func)(double), const char* name) {
     int n;
-    printf("Введите количество значений: ");
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°С‡РµРЅРёР№: ");
     if (scanf("%d", &n) != 1 || n <= 0) {
-        printf("Ошибка ввода количества.\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР° РєРѕР»РёС‡РµСЃС‚РІР°.\n");
         clear_input();
         return;
     }
 
-    printf("Введите %d значений для x:\n", n);
+    printf("Р’РІРµРґРёС‚Рµ %d Р·РЅР°С‡РµРЅРёР№ РґР»СЏ x:\n", n);
     for (int i = 0; i < n; i++) {
         double x;
         printf("x[%d] = ", i + 1);
         if (scanf("%lf", &x) != 1) {
-            printf("Ошибка ввода значения.\n");
+            printf("РћС€РёР±РєР° РІРІРѕРґР° Р·РЅР°С‡РµРЅРёСЏ.\n");
             clear_input();
             return;
         }
@@ -205,13 +205,13 @@ void calculate_set(double (*func)(double), const char* name) {
 
 void calculate_fixed_step(double (*func)(double), const char* name) {
     double xmin, dx;
-    printf("Введите начальное значение xmin: ");
+    printf("Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ xmin: ");
     if (scanf("%lf", &xmin) != 1) { clear_input(); return; }
 
-    printf("Введите шаг dx: ");
+    printf("Р’РІРµРґРёС‚Рµ С€Р°Рі dx: ");
     if (scanf("%lf", &dx) != 1) { clear_input(); return; }
 
-    printf("\nРасчет %s (10 значений, шаг %.4lf):\n", name, dx);
+    printf("\nР Р°СЃС‡РµС‚ %s (10 Р·РЅР°С‡РµРЅРёР№, С€Р°Рі %.4lf):\n", name, dx);
     printf(" x\t\t%s\n", name);
     printf("------------------------\n");
 
@@ -225,21 +225,21 @@ void calculate_random(double (*func)(double), const char* name) {
     int n;
     double xmin, xmax;
 
-    printf("Введите количество случайных значений (N): ");
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»СѓС‡Р°Р№РЅС‹С… Р·РЅР°С‡РµРЅРёР№ (N): ");
     if (scanf("%d", &n) != 1 || n <= 0) { clear_input(); return; }
 
-    printf("Введите левую границу интервала (xmin): ");
+    printf("Р’РІРµРґРёС‚Рµ Р»РµРІСѓСЋ РіСЂР°РЅРёС†Сѓ РёРЅС‚РµСЂРІР°Р»Р° (xmin): ");
     if (scanf("%lf", &xmin) != 1) { clear_input(); return; }
 
-    printf("Введите правую границу интервала (xmax): ");
+    printf("Р’РІРµРґРёС‚Рµ РїСЂР°РІСѓСЋ РіСЂР°РЅРёС†Сѓ РёРЅС‚РµСЂРІР°Р»Р° (xmax): ");
     if (scanf("%lf", &xmax) != 1) { clear_input(); return; }
 
     if (xmin >= xmax) {
-        printf("Ошибка: xmin должно быть меньше xmax.\n");
+        printf("РћС€РёР±РєР°: xmin РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РјРµРЅСЊС€Рµ xmax.\n");
         return;
     }
 
-    printf("\nРасчет %s для %d случайных значений на [%.4lf, %.4lf]:\n", name, n, xmin, xmax);
+    printf("\nР Р°СЃС‡РµС‚ %s РґР»СЏ %d СЃР»СѓС‡Р°Р№РЅС‹С… Р·РЅР°С‡РµРЅРёР№ РЅР° [%.4lf, %.4lf]:\n", name, n, xmin, xmax);
     printf(" x\t\t%s\n", name);
     printf("------------------------\n");
 
